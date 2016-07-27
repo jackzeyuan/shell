@@ -1,0 +1,196 @@
+Host 10.3.19.75
+        Hostname 10.3.19.75 
+        User git
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.79
+        Hostname 10.3.63.79
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.135
+        Hostname 10.3.63.135
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.136
+        Hostname 10.3.63.136
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.137
+        Hostname 10.3.63.137
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 113.31.72.204
+        Hostname 113.31.72.204
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.138
+        Hostname 10.3.63.138
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.203
+        Hostname 10.3.63.203
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.237
+        Hostname 10.3.63.237
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.238
+        Hostname 10.3.63.238
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.11
+        Hostname 10.3.63.11
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.12
+        Hostname 10.3.63.12
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.13
+        Hostname 10.3.63.13
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.16
+        Hostname 10.3.63.16
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.17
+        Hostname 10.3.63.17
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.19
+        Hostname 10.3.63.19
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.20
+        Hostname 10.3.63.20
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.21
+        Hostname 10.3.63.21
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.22
+        Hostname 10.3.63.22
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.24
+        Hostname 10.3.63.24
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.25
+        Hostname 10.3.63.25
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.26
+        Hostname 10.3.63.26
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.27
+        Hostname 10.3.63.27
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.28
+        Hostname 10.3.63.28
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.11
+        Hostname 10.3.63.11
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.17
+        Hostname 10.3.63.17
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.17
+        Hostname 10.3.63.17
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.12
+        Hostname 10.3.63.12
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.13
+        Hostname 10.3.63.13
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.14
+        Hostname 10.3.63.14
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.15
+        Hostname 10.3.63.15
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.203
+        Hostname 10.3.63.203
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.204
+        Hostname 10.3.63.204
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.205
+        Hostname 10.3.63.205
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.206
+        Hostname 10.3.63.206
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.86
+        Hostname 10.3.63.86
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.87
+        Hostname 10.3.63.87
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.84
+        Hostname 10.3.63.84
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.85
+        Hostname 10.3.63.85
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.2
+        Hostname 10.3.63.2
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.3
+        Hostname 10.3.63.3
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.4
+        Hostname 10.3.63.4
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.5
+        Hostname 10.3.63.5
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.6
+        Hostname 10.3.63.6
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.7
+        Hostname 10.3.63.7
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.8
+        Hostname 10.3.63.8
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.9
+        Hostname 10.3.63.9
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.18
+        Hostname 10.3.63.18
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa
+Host 10.3.63.10
+        Hostname 10.3.63.10
+        User root
+        IdentityFile /root/.ssh/chewen/id_rsa

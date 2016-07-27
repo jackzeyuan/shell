@@ -1,0 +1,1 @@
+    jar uvf myjar.jar com/blackwing/ClassToAdd.class  

@@ -1,0 +1,407 @@
+2015-07-01 16:38:29
+Full thread dump Java HotSpot(TM) 64-Bit Server VM (24.45-b08 mixed mode):
+
+"Attach Listener" daemon prio=10 tid=0x00007ff9cc001000 nid=0x5b9 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"qtp374410755-66" prio=10 tid=0x00007ff96c001000 nid=0x588 waiting on condition [0x00007ff9d864c000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000077cdd7b28> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-65" prio=10 tid=0x00007ff990001000 nid=0x560 waiting on condition [0x00007ff9d844a000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000077cdd7b28> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:744)
+
+"QuartzScheduler_ExecutionScheduler-NON_CLUSTERED_MisfireHandler" prio=10 tid=0x00007ff95004c800 nid=0x47f waiting on condition [0x00007ff973ffe000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.quartz.impl.jdbcjobstore.JobStoreSupport$MisfireHandler.run(JobStoreSupport.java:3976)
+
+"com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#2" daemon prio=10 tid=0x00007ff950002800 nid=0x47b in Object.wait() [0x00007ff9d8147000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:534)
+	- locked <0x000000077382f800> (a com.mchange.v2.async.ThreadPoolAsynchronousRunner)
+
+"com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#1" daemon prio=10 tid=0x00007ff950001800 nid=0x47a in Object.wait() [0x00007ff9d8248000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:534)
+	- locked <0x000000077382f800> (a com.mchange.v2.async.ThreadPoolAsynchronousRunner)
+
+"com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread-#0" daemon prio=10 tid=0x00007ff950009800 nid=0x479 in Object.wait() [0x00007ff9d8349000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at com.mchange.v2.async.ThreadPoolAsynchronousRunner$PoolThread.run(ThreadPoolAsynchronousRunner.java:534)
+	- locked <0x000000077382f800> (a com.mchange.v2.async.ThreadPoolAsynchronousRunner)
+
+"Timer-0" daemon prio=10 tid=0x00007ff950005800 nid=0x478 in Object.wait() [0x00007ff9d854b000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	- locked <0x00000007737d1258> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:505)
+
+"ExecutionScheduler_QuartzSchedulerThread" prio=10 tid=0x00007ffa2128e800 nid=0x38e in Object.wait() [0x00007ff9d884e000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:410)
+	- locked <0x000000077d0beb98> (a java.lang.Object)
+
+"ExecutionScheduler_Worker-5" prio=10 tid=0x00007ffa2128c800 nid=0x38c in Object.wait() [0x00007ff9d894f000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+	- locked <0x000000077d1b6640> (a java.lang.Object)
+
+"ExecutionScheduler_Worker-4" prio=10 tid=0x00007ffa2128a800 nid=0x38b in Object.wait() [0x00007ff9d8a50000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+	- locked <0x000000077cfc7140> (a java.lang.Object)
+
+"ExecutionScheduler_Worker-3" prio=10 tid=0x00007ffa21289000 nid=0x38a in Object.wait() [0x00007ff9d8b51000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+	- locked <0x000000077d0bec40> (a java.lang.Object)
+
+"ExecutionScheduler_Worker-2" prio=10 tid=0x00007ffa21284000 nid=0x389 in Object.wait() [0x00007ff9d8c52000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+	- locked <0x000000077cfc7218> (a java.lang.Object)
+
+"ExecutionScheduler_Worker-1" prio=10 tid=0x00007ffa21285800 nid=0x388 in Object.wait() [0x00007ff9d8d53000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:568)
+	- locked <0x000000077d1b66d0> (a java.lang.Object)
+
+"Thread-21" prio=10 tid=0x00007ffa211a1800 nid=0x387 in Object.wait() [0x00007ff9d905c000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at org.apache.ambari.server.actionmanager.ActionScheduler.run(ActionScheduler.java:149)
+	- locked <0x0000000791c072c8> (a java.lang.Object)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-33 Acceptor1 SslSelectChannelConnector@0.0.0.0:8441" prio=10 tid=0x00007ffa2114d800 nid=0x386 runnable [0x00007ff9d915d000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+	- locked <0x000000077cfc7338> (a java.lang.Object)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-32 Selector1" prio=10 tid=0x00007ffa2114b800 nid=0x385 runnable [0x00007ff9d925e000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	- locked <0x000000077d2ae178> (a sun.nio.ch.Util$2)
+	- locked <0x000000077d2ae188> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000077d2ae130> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
+	at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-31 Acceptor0 SslSelectChannelConnector@0.0.0.0:8441" prio=10 tid=0x00007ffa21149800 nid=0x384 waiting for monitor entry [0x00007ff9d935f000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:225)
+	- waiting to lock <0x000000077cfc7338> (a java.lang.Object)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-30 Selector0" prio=10 tid=0x00007ffa20ece000 nid=0x383 runnable [0x00007ff9d9460000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	- locked <0x000000077cdd7d50> (a sun.nio.ch.Util$2)
+	- locked <0x000000077cdd7d60> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000077cdd7d08> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
+	at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-29 Acceptor1 SslSelectChannelConnector@0.0.0.0:8440" prio=10 tid=0x00007ffa20ecc800 nid=0x382 waiting for monitor entry [0x00007ff9d9561000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:225)
+	- waiting to lock <0x000000077cecf670> (a java.lang.Object)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-28 Acceptor0 SslSelectChannelConnector@0.0.0.0:8440" prio=10 tid=0x00007ffa2115d000 nid=0x381 runnable [0x00007ff9d9662000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+	- locked <0x000000077cecf670> (a java.lang.Object)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-27 Selector1" prio=10 tid=0x00007ffa2115b800 nid=0x380 runnable [0x00007ff9d9763000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	- locked <0x000000077d0bed48> (a sun.nio.ch.Util$2)
+	- locked <0x000000077d0bed58> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000077d0bed00> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
+	at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp374410755-26 Selector0" prio=10 tid=0x00007ffa21160800 nid=0x37f runnable [0x00007ff9d9864000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	- locked <0x000000077d3a5e40> (a sun.nio.ch.Util$2)
+	- locked <0x000000077d3a5e50> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000077d3a5df8> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
+	at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"HashSessionScavenger-1" daemon prio=10 tid=0x00007ffa20eca800 nid=0x37e in Object.wait() [0x00007ff9d9965000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	- locked <0x000000077cfc74b0> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:505)
+
+"qtp594473575-24" prio=10 tid=0x00007ffa20e6c000 nid=0x37d waiting on condition [0x00007ff9d9a66000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000077cecf718> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-23" prio=10 tid=0x00007ffa20e78800 nid=0x37c waiting on condition [0x00007ff9d9b67000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000077cecf718> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-22" prio=10 tid=0x00007ffa20e77000 nid=0x37b waiting on condition [0x00007ff9d9c68000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000077cecf718> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-21" prio=10 tid=0x00007ffa20e85000 nid=0x37a waiting on condition [0x00007ff9d9d69000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at sun.misc.Unsafe.park(Native Method)
+	- parking to wait for  <0x000000077cecf718> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+	at java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:226)
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2082)
+	at org.eclipse.jetty.util.BlockingArrayQueue.poll(BlockingArrayQueue.java:342)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.idleJobPoll(QueuedThreadPool.java:526)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.access$600(QueuedThreadPool.java:44)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-20 Acceptor1 SelectChannelConnector@0.0.0.0:8888" prio=10 tid=0x00007ffa20ea1000 nid=0x379 runnable [0x00007ff9d9e6a000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.ServerSocketChannelImpl.accept0(Native Method)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:241)
+	- locked <0x000000077cfc75e0> (a java.lang.Object)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-19 Acceptor0 SelectChannelConnector@0.0.0.0:8888" prio=10 tid=0x00007ffa20e9f800 nid=0x378 waiting for monitor entry [0x00007ff9d9f6b000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:225)
+	- waiting to lock <0x000000077cfc75e0> (a java.lang.Object)
+	at org.eclipse.jetty.server.nio.SelectChannelConnector.accept(SelectChannelConnector.java:109)
+	at org.eclipse.jetty.server.AbstractConnector$Acceptor.run(AbstractConnector.java:938)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-18 Selector1" prio=10 tid=0x00007ffa20e75000 nid=0x377 runnable [0x00007ff9da06c000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	- locked <0x000000077cecf9c8> (a sun.nio.ch.Util$2)
+	- locked <0x000000077cecf9d8> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000077cecf980> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
+	at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"qtp594473575-17 Selector0" prio=10 tid=0x00007ffa20e74800 nid=0x376 runnable [0x00007ffa00138000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.nio.ch.EPollArrayWrapper.epollWait(Native Method)
+	at sun.nio.ch.EPollArrayWrapper.poll(EPollArrayWrapper.java:269)
+	at sun.nio.ch.EPollSelectorImpl.doSelect(EPollSelectorImpl.java:79)
+	at sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:87)
+	- locked <0x000000077cfc77d8> (a sun.nio.ch.Util$2)
+	- locked <0x000000077cfc77e8> (a java.util.Collections$UnmodifiableSet)
+	- locked <0x000000077cfc7790> (a sun.nio.ch.EPollSelectorImpl)
+	at sun.nio.ch.SelectorImpl.select(SelectorImpl.java:98)
+	at org.eclipse.jetty.io.nio.SelectorManager$SelectSet.doSelect(SelectorManager.java:569)
+	at org.eclipse.jetty.io.nio.SelectorManager$1.run(SelectorManager.java:290)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+
+"HashSessionScavenger-0" daemon prio=10 tid=0x00007ffa210b9000 nid=0x375 in Object.wait() [0x00007ff9da16d000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.util.TimerThread.mainLoop(Timer.java:552)
+	- locked <0x000000077d1b6a18> (a java.util.TaskQueue)
+	at java.util.TimerThread.run(Timer.java:505)
+
+"Thread-1" prio=10 tid=0x00007ffa20ed7800 nid=0x373 waiting on condition [0x00007ffa0044c000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleep(Native Method)
+	at org.apache.ambari.server.agent.HeartbeatMonitor.run(HeartbeatMonitor.java:96)
+	at java.lang.Thread.run(Thread.java:744)
+
+"com.google.inject.internal.util.$Finalizer" daemon prio=10 tid=0x00007ffa205eb800 nid=0x366 in Object.wait() [0x00007ffa007a2000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000790024140> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	- locked <0x0000000790024140> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at com.google.inject.internal.util.$Finalizer.run(Finalizer.java:114)
+
+"Service Thread" daemon prio=10 tid=0x00007ffa2017a000 nid=0x364 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" daemon prio=10 tid=0x00007ffa20177800 nid=0x363 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" daemon prio=10 tid=0x00007ffa20175000 nid=0x362 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" daemon prio=10 tid=0x00007ffa20173000 nid=0x361 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Surrogate Locker Thread (Concurrent GC)" daemon prio=10 tid=0x00007ffa20169000 nid=0x360 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" daemon prio=10 tid=0x00007ffa20152000 nid=0x35f in Object.wait() [0x00007ffa01659000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x0000000790025e40> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:135)
+	- locked <0x0000000790025e40> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:151)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:189)
+
+"Reference Handler" daemon prio=10 tid=0x00007ffa2014e000 nid=0x35e in Object.wait() [0x00007ffa0175a000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:503)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:133)
+	- locked <0x00000007900235d8> (a java.lang.ref.Reference$Lock)
+
+"main" prio=10 tid=0x00007ffa20011000 nid=0x351 in Object.wait() [0x00007ffa27f6d000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:503)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.join(QueuedThreadPool.java:391)
+	- locked <0x000000077d1b6a58> (a java.lang.Object)
+	at org.eclipse.jetty.server.Server.join(Server.java:411)
+	at org.apache.ambari.server.controller.AmbariServer.run(AmbariServer.java:438)
+	at org.apache.ambari.server.controller.AmbariServer.main(AmbariServer.java:573)
+
+"VM Thread" prio=10 tid=0x00007ffa2014b800 nid=0x35d runnable 
+
+"Gang worker#0 (Parallel GC Threads)" prio=10 tid=0x00007ffa20022000 nid=0x352 runnable 
+
+"Gang worker#1 (Parallel GC Threads)" prio=10 tid=0x00007ffa20024000 nid=0x353 runnable 
+
+"Gang worker#2 (Parallel GC Threads)" prio=10 tid=0x00007ffa20026000 nid=0x354 runnable 
+
+"Gang worker#3 (Parallel GC Threads)" prio=10 tid=0x00007ffa20027800 nid=0x355 runnable 
+
+"Gang worker#4 (Parallel GC Threads)" prio=10 tid=0x00007ffa20029800 nid=0x356 runnable 
+
+"Gang worker#5 (Parallel GC Threads)" prio=10 tid=0x00007ffa2002b800 nid=0x357 runnable 
+
+"Gang worker#6 (Parallel GC Threads)" prio=10 tid=0x00007ffa2002d000 nid=0x358 runnable 
+
+"Gang worker#7 (Parallel GC Threads)" prio=10 tid=0x00007ffa2002f000 nid=0x359 runnable 
+
+"Concurrent Mark-Sweep GC Thread" prio=10 tid=0x00007ffa20108000 nid=0x35c runnable 
+"Gang worker#0 (Parallel CMS Threads)" prio=10 tid=0x00007ffa20104000 nid=0x35a runnable 
+
+"Gang worker#1 (Parallel CMS Threads)" prio=10 tid=0x00007ffa20106000 nid=0x35b runnable 
+
+"VM Periodic Task Thread" prio=10 tid=0x00007ffa2018d800 nid=0x365 waiting on condition 
+
+JNI global references: 162
+

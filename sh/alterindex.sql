@@ -1,0 +1,16 @@
+alter table cw_news drop key createtime;
+alter table cw_news drop key userid;
+alter table cw_news drop key `sub-site`;
+alter table cw_news drop key `main_news_id`;
+alter table cw_news drop key `top_index`;
+alter table cw_news drop key `topic_index`;
+alter table cw_news drop key `city_topic_type_index`;
+alter table cw_news drop key `city_recommand_index`;
+alter table cw_news change id id int(10);
+alter table cw_news drop primary key;
+Alter table cw_news add primary key(id);
+alter table cw_news change id id int(10) not null auto_increment;
+alter table cw_news AUTO_INCREMENT = 700070;
+alter table add key id_status (id, status);
+alter table cw_news add key id_status (main_news_id, status);
+alter table cw_news add key mid_status_ctime_type (main_news_id, status, create_time, `type`);

@@ -1,0 +1,2 @@
+cd /home/lion/.config/sublime-text-3/Packages
+ln -s /opt/cafe/Packages/Python Python
