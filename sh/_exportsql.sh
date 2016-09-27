@@ -2,7 +2,7 @@
 
 
 MYSQL_USER=18dx
-MYSQL_HOST=10.3.22.79
+MYSQL_HOST=10.3.63.11
 MYSQL_PORT=6610
 MYSQL_PASSWD=18dxadmin
 MYSQL_DB=chewen
@@ -19,17 +19,18 @@ MYSQL_DB=chewen
 
 #EXECUTE_SQL="select m.id, m.cartype, b.type, c.id from Car c, baseParameter b, carModel m where c.id=b.cid and c.modelId=m.id and m.carType<>b.type;"
 
-#EXCEUTE_SQL="SELECT * FROM information_schema.`TRIGGERS`;"
+#EXECUTE_SQL="show processlist;"
 
-#EXECUTE_SQL="show processlist;";
+#EXECUTE_SQL="select name from cw_topic;"
 
-EXECUTE_SQL="select  CONCAT(id, '~', title) from cw_question where status=0";
+EXECUTE_SQL="select CONCAT(name, '~', tel, '~', email, '~', gender, '~', province, '~', city, '~', dealer) from cw_zt_xmdo_sjbm  where create_time >='2015-04-02 00:00:00';"
+
 #RESULT_FILE=sql.txt
 
-#mysql -u$MYSQL_USER -h$MYSQL_HOST -P$MYSQL_PORT -p$MYSQL_PASSWD $MYSQL_DB -e "$EXECUTE_SQL"
+mysql -u$MYSQL_USER -h$MYSQL_HOST -P$MYSQL_PORT -p$MYSQL_PASSWD $MYSQL_DB -e "$EXECUTE_SQL"
 
 
 #"/usr/local/mysql/bin/mysql -uyejr -pyejr db_name < db_name.sql"
 
 #mysqldump -u$MYSQL_USER -h$MYSQL_HOST -P$MYSQL_PORT -p$MYSQL_PASSWD $MYSQL_DB
-mysql -u$MYSQL_USER -h$MYSQL_HOST -P$MYSQL_PORT -p$MYSQL_PASSWD $MYSQL_DB
+#mysql -u$MYSQL_USER -h$MYSQL_HOST -P$MYSQL_PORT -p$MYSQL_PASSWD $MYSQL_DB

@@ -1,0 +1,32 @@
+http://blogread.cn/it/article/7148?f=wb
+http://www.lognormal.com/blog/2012/09/27/linux-tcpip-tuning/
+
+1, cat /proc/sys/fs/file-nr
+
+
+vim /etc/sysctl.conf
+
+fs.file-max = 1020000
+net.ipv4.ip_conntrack_max = 1020000
+net.ipv4.netfilter.ip_conntrack_max = 1020000
+
+
+2, ulimit -n
+
+tempor
+ulimit -n 1020000
+
+forever
+
+vim /etc/security/limits.conf
+
+add
+
+# /etc/security/limits.conf
+root         hard    nofile      1020000
+root         soft    nofile      1020000
+
+
+edit
+/proc/sys/net/ipv4/tcp_wmem
+/proc/sys/net/ipv4/tcp_rmem

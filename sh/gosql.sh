@@ -1,3 +1,4 @@
 #!/bin/bash/
 
-mysql -uenvtest -h 10.3.19.75 -P 6611 -pchewen2013
+mysql -u18dx -h 10.3.63.137 -P 6610 -p18dxadmin
+#mysql -u18dx -h 10.3.63.137 -P 6610 -p18dxadmin

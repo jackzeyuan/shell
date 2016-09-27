@@ -1,0 +1,4 @@
+
+
+sudo ifconfig eth0 promisc 设置eth0为混杂模式。
+sudo ifconfig eth0 -promisc 取消它的混杂模式

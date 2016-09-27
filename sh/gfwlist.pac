@@ -21,7 +21,7 @@ var domains = {
   "cmule.com": 1, 
   "gappp.org": 1, 
   "givemesomethingtoread.com": 1, 
-  "yahoo.com.tw": 1, 
+  "wsj.cn": 1, 
   "robtex.com": 1, 
   "thelifeyoucansave.com": 1, 
   "perfspot.com": 1, 
@@ -2044,7 +2044,6 @@ var domains = {
   "geocities.co.jp": 1, 
   "listentoyoutube.com": 1, 
   "somee.com": 1, 
-  "yahoo.com.hk": 1, 
   "sexhuang.com": 1, 
   "stonegames.net": 1, 
   "dzze.com": 1, 
@@ -2182,7 +2181,6 @@ var domains = {
   "36rain.com": 1, 
   "peacefire.org": 1, 
   "cytode.us": 1, 
-  "yahoo.com": 1, 
   "hongmeimei.com": 1, 
   "waffle1999.com": 1, 
   "globalvoicesonline.org": 1, 
@@ -2437,12 +2435,13 @@ var domains = {
   "twiggit.org": 1, 
   "lookatgame.com": 1, 
   "darpa.mil": 1, 
-  "wtfpeople.com": 1, 
-  "1-apple.com.tw": 1
+  "wtfpeople.com": 1,
+  "wsjemail.com": 1,
+  "1-apple.com.tw": 1,
+  "daliulian.com": 1
 };
 
-//var proxy = "SOCKS5 127.0.0.1:7070; SOCKS 127.0.0.1:7070; DIRECT;";
-var proxy = "SOCKS5 127.0.0.1:1080;  DIRECT;";
+var proxy = "SOCKS5 127.0.0.1:7070; SOCKS 127.0.0.1:7070; DIRECT;";
 
 var direct = 'DIRECT;';
 

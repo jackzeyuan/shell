@@ -2,6 +2,6 @@
 
 
 
-cd /usr/local/android-studio/bin/
+cd /usr/local/android-studio/bin
 
 sh studio.sh

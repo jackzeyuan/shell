@@ -1,0 +1,23 @@
+http://www.linuxeden.com/plus/view.php?aid=150849
+chmsee
+
+
+
+function FindProxyForURL(url, host) {  
+	if(isBlockedByGFW(url))  return "PROXY 198.200.46.213:8080";  
+	//domains = ["forum.ubuntu.org.cn","PROXY 127.0.0.1:8080"];  
+	//for(var i=0;i<domains.length;i+=2)  {  
+		//if(dnsDomainIs(host, domains[i]))  
+		//	return domains[i+1];  
+	//}  
+	return "DIRECT";  
+
+}
+
+sh -qTfnN -D 7070 name@proxy.94cat.com
+
+-q :- be very quite, we are acting only as a tunnel.
+-T :- Do not allocate a pseudo tty, we are only acting a tunnel.
+-f :- move the ssh process to background, as we don’t want to interact with this ssh session directly.
+-N :- Do not execute remote command.
+-n :- redirect standard input to /dev/null.

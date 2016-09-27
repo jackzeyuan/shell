@@ -1,1 +1,1 @@
- git checkout -b local-branchname origin/remote_branchname 
+cherry-pick

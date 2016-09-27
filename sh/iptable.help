@@ -1,0 +1,22 @@
+iptables -I INPUT 6 -p tcp --dport 8388 -j ACCEPT 
+
+
+iptables -L -n
+
+
+iptables -D INPUT 6
+
+
+
+root       709  0.0  0.0   4472  1648 ?        S    14:45   0:00 /bin/sh /usr/local/mysql/bin/mysqld_safe --datadir=/data/mysql --pid-file=/data/mysql/mysql.pid
+mysql     1584  0.0  4.6 491748 94460 ?        Sl   14:45   0:00 /usr/local/mysql/bin/mysqld --basedir=/usr/local/mysql --datadir=/data/mysql --plugin-dir=/usr/local/mysql/lib/plugin --user=mysql --log-error=/data/mysql/mysql-error.log --open-files-limit=65535 --pid-file=/data/mysql/mysql.pid --socket=/tmp/mysql.sock --port=3306
+
+
+
+Your domain:                  ss.xiaochengzip.vip
+Virtualhost conf:             /usr/local/nginx/conf/vhost/ss.xiaochengzip.vip.conf
+Directory of:                 /data/wwwroot/ss.xiaochengzip.vip
+Self-signed SSL Certificate:  /usr/local/nginx/conf/ssl/ss.xiaochengzip.vip.crt
+SSL Private Key:              /usr/local/nginx/conf/ssl/ss.xiaochengzip.vip.key
+SSL CSR File:                 /usr/local/nginx/conf/ssl/ss.xiaochengzip.vip.csr
+

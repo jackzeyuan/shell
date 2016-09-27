@@ -1,1 +1,118 @@
-    jar uvf myjar.jar com/blackwing/ClassToAdd.class  
+jar uvf myjar.jar com/blackwing/ClassToAdd.class  
+
+
+jar -tvf Sdk4J-1.0.jar > all.txt
+jar uvf myjar.jar com/blackwing/ClassToAdd.class
+
+
+SELECT * FROM information_schema.`TRIGGERS` where TRIGGER_SCHEMA='autodata' limit 1, 2\G
+
+
+SELECT OrderId,DATE_SUB(OrderDate,INTERVAL 2 DAY) AS OrderPayDate
+FROM Orders
+
+iconv -f gb2312 -t utf8 -c daqindiguo.txt > 2.txt
+
+sudo nmap -v -sV -sC -O 192.187.111.26
+
+
+find . -type f | xargs sed -i_bak 's/^\/\*[. 0-9]*\*\///g'
+
+mysqldump -u18dx -p18dxadmin -h 10.3.19.75 -P 6611 autodata dic_item > ./seodata/dic_item.sql
+
+ps axwef
+
+
+ps -eo pcpu,pid,user,args |sort -k 1 -r |head -16
+
+几种去除^M的方法
+
+1、 cat filename1 | tr -d "\r" > newfile
+
+2、 sed -e "s/^V^M//" filename > outputfilename
+
+3、vi： 用vi打开文件
+
+1. 按ESC键
+
+2. 输入 :%s/^M//g
+
+确定 ^M是使用 "CTRL-V CTRL-M" 而不是字面上的 ^M。这个正则式将替换所有回车符前的 ^M为空($是为了保证^M出现在行尾)
+
+cat split_ag  | grep "1/Feb/2014"| grep Baiduspider |grep -E 'GET /([0-9]+).html' | wc -l
+
+ cat result.txt | awk -F "ask" '{print $3}' > temp2.txt
+sort temp2.txt >sort2.txt
+
+
+/home/rawind/.longene/qq/drive_c/Program Files/Tencent/QQ/Users/303318068/FileRecv
+
+
+find path -type f -size +1M
+如果是找恰好等于1M的文件，就是
+find path -type f -size 1M
+同理，小于1M的文件
+find path -type f -size -1M
+
+
+ ssh -qTfnN -D 7070 root@198.200.46.213
+
+tcpdump -i eth0  host 113.31.72.210 and port 80 -X -e -nn > client.txt
+
+ ss -ant | awk ' NR>1 {++s[$1]} END {for(k in s) print k,s[k]} '
+
+查看udp端口是否打开
+ nc -vuz 10.3.63.204 161
+
+ps aux |grep snmp |grep -v grep |awk '{print $2}' |xargs kill
+
+这条命令将只输出第一行，同时退出程序。
+sed -n '1p;1q' file
+
+
+
+sh -qTfnN -D 7070 root@yunjie.com
+
+find ./* |grep .DS_Store | xargs rm
+
+df -hl
+du -sh
+
+free -lm
+从根目录开始查找所有扩展名为.log的文本文件，并找出包含”ERROR”的行
+find / -type f -name "*.log" | xargs grep "ERROR"
+例子：从当前目录开始查找所有扩展名为.in的文本文件，并找出包含”thermcontact”的行
+find . -name "*.in" | xargs grep "thermcontact"
+
+
+rm -rf service.obd.chewen.com && mv obd-service-1.0-SNAPSHOT service.obd.chewen.com
+
+
+less qingting_2.csv | awk -F ',' '{print "db.Device.save({_id:"$2",bindMobile:"$3",expiredTime:ISODate(\"2016-08-30:17:00:00\"),createTime:ISODate(\"2015-08-30:17:00:00\"),status:0});"}'
+
+
+cat tmp | sort -r|uniq -c |grep -v "1"
+
+cat qingting_7000.csv | awk -F ',' '{print $2}' |sort -r | uniq -c |grep -v "1"
+
+ssh root@113.31.72.204 -p 2222
+
+chmod 0600 /root/.ssh/id_rsa
+
+lsof | grep "delete"
+
+lsof -n|grep "delete"|awk '{print $2}'|sort|uniq -c|sort -nr|more
+-查看前进程打少句柄数
+# lsof -n|awk '{print $2}'|sort|uniq -c|sort -nr|more
+-根据ID号查看进程名
+# ps aef|grep ID号
+
+
+cat *.txt | awk -F '-' '{print $5}' | uniq > no_obd.txt
+
+cat access.log.20151022.* | awk -F "|" '{if(length($6)>7) {print $1"|" $4"|"$6} }' > a.txt
+
+cat access.log |grep "admin.obd.chewen.com" |grep "08/Dec/2015" |awk -F ' ' '{if($10>200) {print $4"-"$8"-"$10} }' > b.txt
+
+
+find ./ -name "hdfs-audit.log.*" -mtime +3 | xargs rm -f

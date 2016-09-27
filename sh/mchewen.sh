@@ -1,16 +1,5 @@
 #!/bin/bash/
 
-
-WWW_HOME=/home/lion/chewen/git/chewen/chewen
-ASK_HOME=/home/lion/chewen/git/chewen/ask-chewen
-RESOURCE_HOME=/home/lion/chewen/config/resources
-RESIN_HOME=/opt/cafe/resin-pro-3.1.12
-
-echo " cp dbsourc file "
-
-#cp /data/www/dbsource.xml $WWW_HOME/target/chewen/WEB-INF/classes/XmlConfig/sys/
-#cp /data/www/dbsource.xml $ASK_HOME/target/ask-chewen/WEB-INF/classes/XmlConfig/sys/
-
 if [ $# -lt 1 ]
 then
    echo "$0 1 for complile chewen and restart resin ,2  for compile, 3 for restart resin "
@@ -42,7 +31,7 @@ fi
 if [ $1 -eq 1 ] 
 then
 echo "compile chewen"
-cd $WWW_HOME
+cd /home/rawind/git/chewen/chewen
 mvn clean -U package -Dmaven.test.skip=true
 #mvn clean -U compile -Dmaven.test.skip=true
 
@@ -52,11 +41,11 @@ fi
 if [ $1 -eq 2 ] 
 then
 echo "compile chewen"
-cd $WWW_HOME
+cd /home/rawind/git/chewen/chewen
 #mvn clean compile
 mvn clean -U compile -Dmaven.test.skip=true
 
-#cp -r $RESOURCE_HOME/* $WWW_HOME/target/chewen/classes
+#cp -r /home/rawind/Documents/chewen/config/resources/* /home/rawind/git/chewen/chewen/target/classes
 fi
 
 if [ $? -ne 0 ]
@@ -66,11 +55,10 @@ then
 fi
 
 
-if [ $1 -eq 3 ]; then
+if [ $1 -ne 2 ]; then
 
-echo "copy service jar  file"
-#cp -r $RESOURCE_HOME/* $WWW_HOME/target/chewen/WEB-INF/classes
-cp /home/lion/chewen/git/chewen_tools/chewen-service/target/chewen-service-1.0-SNAPSHOT.jar /home/lion/chewen/git/chewen/chewen/target/chewen/WEB-INF/lib/
+echo "copy config file"
+#cp -r /home/rawind/Documents/chewen/config/resources/* /home/rawind/git/chewen/chewen/target/chewen/WEB-INF/classes
 
 if [ $? -ne 0 ]
 then
@@ -78,8 +66,13 @@ then
   exit;
 fi
 
-
 fi
+
+if [ $1 -eq 3 ]
+then
+   cp /home/rawind/git/chewen_tools/chewen-service/target/chewen-service-1.0-SNAPSHOT.jar /home/rawind/git/chewen/chewen/target/chewen/WEB-INF/lib/
+fi
+
 
 
 
@@ -90,6 +83,8 @@ if [ $1 -eq 1 ] || [ $1 -eq 3 ]; then
 #rm slf4j-api-1.6.1.jar
 
 echo "------------------ start resin -------------------------"
-cd $RESIN_HOME/bin
+cd /opt/cafe/resin-pro-3.1.12/bin
 sh httpd.sh
+
+
 fi

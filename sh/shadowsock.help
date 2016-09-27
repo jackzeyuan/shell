@@ -1,0 +1,31 @@
+
+
+sudo apt-get install python-setuptools
+
+
+
+sudo  yum install python-setuptools
+
+
+sudo easy_install pip
+
+
+
+pip install shadowsocks
+
+
+$ sudo apt-get install python-pip python-dev build-essential 
+$ sudo pip install --upgrade pip 
+$ sudo pip install --upgrade virtualenv 
+
+
+lsattr
+chattr
+
+screen -ls
+screen -r x
+screen -D  -r 25372 #解释：-D -r 先踢掉前一用户，再登陆。
+
+
+
+root/password,,    shadoowsocks/chewen18181818

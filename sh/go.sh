@@ -8,6 +8,12 @@
 
 
 
+if [ $1 -eq 124 ]
+then
+    ssh lion@192.168.1.124
+fi
+
+
 if [ $1 -eq 75 ]
 then
     ssh root@10.3.19.75
@@ -16,7 +22,7 @@ fi
 
 if [ $1 -eq 79 ]
 then
-    ssh root@10.3.22.79
+    ssh root@10.3.19.79
 fi
 
 if [ $1 -eq 135 ]
@@ -31,15 +37,7 @@ then
     ssh root@10.3.24.136
 fi
 
-if [ $1 -eq 137 ]
-then
-    ssh root@10.3.24.137
-fi
 
-if [ $1 -eq 138 ]
-then
-    ssh root@10.3.24.138
-fi
 
 
 if [ $1 -eq 203 ]

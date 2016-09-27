@@ -1,0 +1,1 @@
+./mongoexport -h 10.3.63.12 --port 27017 -d question -c ask_question -f id,title -q '{"_id":{"$gte": 100}, "_id":{"$lt": max}}'

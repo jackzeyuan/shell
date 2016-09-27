@@ -1,0 +1,60 @@
+./mongod -f /etc/mongodb.conf
+/mongoexport -h 10.3.63.12 --port 27017 -d question -c ask_question -f id,title -q '{"_id":{"$gte": 100}, "_id":{"$lt": max}}'
+
+db.obd_mainterance_record.remove({"_id":161});
+
+db.obd_mainterance_record.update({"_id":162}, {$set:{status:2}});
+
+
+db.Role.update({"_id":281}, {$set:{additionalAuth:0}});
+db.obd_car.update({"_id":397}, {$set:{"obdNum" : NumberLong("8636009371")}});
+
+
+
+
+db.Notice.update({carId:4}, {$set:{status:1}}, false, true);
+
+db.test0.update( { "count" : { $gt : 1 } } , { $set : { "test2" : "OK"} } ); 只更新了第一条记录
+db.test0.update( { "count" : { $gt : 3 } } , { $set : { "test2" : "OK"} },false,true ); 全更新了
+db.test0.update( { "count" : { $gt : 4 } } , { $set : { "test5" : "OK"} },true,false ); 只加进去了第一条
+db.test0.update( { "count" : { $gt : 5 } } , { $set : { "test5" : "OK"} },true,true ); 全加进去了
+db.test0.update( { "count" : { $gt : 15 } } , { $inc : { "count" : 1} },false,true );全更新了
+db.test0.update( { "count" : { $gt : 10 } } , { $inc : { "count" : 1} },false,false );只更新了第一条
+db.obd_dealer_car_type.update({_id:{$gt:0}}, {$set:{status:0}}, false,true);
+
+
+db.obd_car.update({}, {$set:{"token":""}}, false, true);
+
+
+
+// all update
+db.Dealer.update({}, {$set:{weight:0}}, false, true);
+
+
+db.obd_dealer_mainterance.ensureIndex({"dealerId":1, "carTypeId":1});
+
+
+
+db.obd_dealer_car_type.find({_id:15654});
+db.obd_dealer_mainterance.find({carTypeId:1135, dealerId:100});
+
+db.course.find( { "lectures.lectures_count": { $exists: true } } )
+删除course表中，所有的lectures.lectures_count字段
+
+db.course.update({},{$unset:{"lectures.lectures_count":""}},{multi:true})
+
+根据条件往表里插入一个字段
+db.lecture.update({"course_id":"5352d5ab92fc7705666ae8c9"},{$set:{"file_type":"PDF"}},{multi:true})
+
+
+./mongoexport -h 10.3.63.10 -d obd -c obd_cartype -f modelId,modelName,carId,carName --csv -o obd_cartype.csv
+
+
+db.ask_question.remove({_id:{$lte:18949746,$gte:18949497}})
+
+
+db.obd_car.count({"expiredTime":{$exists:false}});
+
+
+var cdate = new Date(2016, 2, 1);
+db.obd_car.count({"createDate":{$gte: cdate}});

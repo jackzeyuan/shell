@@ -1,0 +1,53 @@
+先你要已经安装好xwindow界面，然后你用vnc连接x界面：
+
+先在x界面查看当前界面：
+
+printenv
+
+得到类似 DISPLAY=:1.0
+那么，你就可以在ssh下（也就是说，你可以写进脚本了）输入：
+
+DISPLAY=:1.0 firefox
+
+那么，在vnc里的x界面可以看到firefox自动打开了。
+下一步，如果你想打开firefox时自动打开google.com，命令如下：
+
+DISPLAY=:1.0 firefox -new-window google.com &
+
+如果你想打开一个新标签，新标签加载baidu.com，命令如下：
+
+DISPLAY=:1.0 firefox -new-tab baidu.com &
+
+那接下来你要关闭firefox，命令如下：
+
+kill $(pgrep firefox)
+
+等一下，如果只是这样关闭firefox，下一次你打开的时候会问你要不要恢复之前的浏览，那可不行，所以你要清除session：
+
+unlink $(find -name sessionstore.js)
+
+当然，既然是刷流量嘛，当然要做的彻底，把cookie删光光：
+
+unlink $(find -name cookies.sqlite)
+
+好，有关操作firefox的命令介绍到这里。但仅仅这样，你是刷不了流量的。因为你只有一个ip，（或几个）。怎么才能有很多ip来刷呢？
+
+答案是：设置代理服务器。
+但要注意，不是所有的代理服务器都是可以用来刷的，大多数是透明的，也就是说，被访问网站还是能辨认出是你的vps在刷他的网站。要用那种高匿名的代理服务器。
+这里，推荐一个网站：http://cn-proxy.com ，目前只看到这个网站，是专门收集高匿名代理服务器的。可惜，收集的都是中国的代理……可惜，可惜。
+命令行如何设置代理服务器：
+可以用php或者别的什么编程工具，编辑 `find -name prefs.js`,
+添加下面几行：
+user_pref(“network.proxy.http”, “180.96.64.179〃);
+user_pref(“network.proxy.http_port”, 8080);
+user_pref(“network.proxy.type”, 1);
+
+仅仅这样，还是不行，因为第三方统计程序会发现为什么100%全是firefox在访问？所以，你还要修改user-agent:
+设置user-agent:
+
+编辑 `find -name prefs.js`,添加一行：
+
+user_pref(“general.useragent.override”, “Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)“);
+
+我不把程序代码写出来了，我只是把原理写出来，根据本文的内容。只要很基础的编程技能，就能编出自动刷ip脚本来。
+
